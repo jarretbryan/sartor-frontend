@@ -35,6 +35,12 @@
   object-fit:scale-down;
 }
 
+.full-image{
+  position: relative;
+  /* float: left; */
+  /* clear: both; */
+}
+
 .submit-fixed {
   /* position: fixed;
   right: 2; */
@@ -62,6 +68,8 @@
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   border-radius: 2px;
+  /* clear: both; */
+  /* height: auto; */
   /* width: 40%; */
   /* float: left; */
 }
