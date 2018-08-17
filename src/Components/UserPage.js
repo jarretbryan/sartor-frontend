@@ -20,7 +20,7 @@ class UserPage extends Component {
     render() {
         return (
             <div>
-                <LookList looks={this.state.userObj.looks}/>
+                <LookList userId = {this.state.userObj.id} looks={this.state.userObj.looks}/>
             </div>
         );
     }

@@ -12,7 +12,7 @@ class lookAdapter {
                 user_id: `${stateObj.user_id}`
             })
         }
-        return fetch('http://localhost:3000/api/v1/looks', postConfig).then(res => res.json())
+        return fetch('http://localhost:4000/api/v1/looks', postConfig).then(res => res.json())
     }
     
 }
