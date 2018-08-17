@@ -28,7 +28,7 @@ class LookSpec extends Component {
                 <div className='card-image'>
                     <img className='full-image' src={this.props.look.lookURL} alt={this.props.look.title} /><br />
                     <button onClick={() => this.props.onClick()}> Close </button>
-                    <ul className="collapsible">
+                    <ul className="">
                         {this.mapLinks()}
                     </ul>
                     <hr/>

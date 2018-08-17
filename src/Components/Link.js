@@ -5,12 +5,10 @@ class Link extends Component {
         return (
             <li className = 'container'>
                <div className="collapsible-header"> 
-                    <p className="collection-item">{this.props.linkInfo.article}</p>
-                </div>
-                <div className="collapsible-body">
+                    <p className="collection-item">{this.props.linkInfo.article} <br/>
                     <a href={this.props.linkInfo.linkURL} className="collection-item active">Here</a>
-                </div>
-                
+                    </p>
+                </div>       
             </li>
         );
     }
