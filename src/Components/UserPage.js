@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import UserFetch from '../api/UserAdapter';
+import LookList from './LookList';
+
 
 class UserPage extends Component {
 
     state ={
-        userObj: {}
+        userObj: {
+            looks: []
+        }
     }
 
     componentDidMount(){
@@ -17,6 +21,7 @@ class UserPage extends Component {
         return (
             <div>
                 HELLO
+                <LookList looks={this.state.userObj.looks}/>
             </div>
         );
     }
