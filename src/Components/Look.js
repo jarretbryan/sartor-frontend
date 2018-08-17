@@ -5,9 +5,11 @@ class Look extends Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.props.look.title}</h1>
-                <img src={this.props.look.lookURL} alt={this.props.look.title}/>
+            <div className='card'>
+                    <h1 className='card-title'>{this.props.look.title}</h1>
+                <div className='card-image'>
+                    <img src={this.props.look.lookURL} alt={this.props.look.title}/>
+                </div>
             </div>
         );
     }
