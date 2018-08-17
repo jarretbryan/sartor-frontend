@@ -25,7 +25,7 @@ class LookList extends Component {
         if (this.state.submitting === true){
             return <LookForm userId={this.props.userId} onSubmit={this.submitNewLook} />
         } else {
-            return <button onClick={() => {
+            return <button className='btn #424242 grey darken-3 waves-light submit-fixed' onClick={() => {
                 this.setState({
                     submitting: true
                 })

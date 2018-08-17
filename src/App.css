@@ -27,6 +27,32 @@
   to { transform: rotate(360deg); }
 }
 
+.look-image {
+  position: relative;
+  /* width: 250px; */
+  height: 250px;
+  overflow: hidden;
+  object-fit:scale-down;
+}
+
+.submit-fixed {
+  /* position: fixed;
+  right: 2; */
+}
+
+.card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: rgba(255, 255, 255, 0.774);
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  width: 40%;
+  /* float: left; */
+}
+
 
 /*!
  * Materialize v1.0.0-rc.2 (http://materializecss.com)
@@ -4772,17 +4798,7 @@ small {
   background-color: #fff;
 }
 
-.card {
-  position: relative;
-  margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
-  -webkit-transition: -webkit-box-shadow .25s;
-  transition: -webkit-box-shadow .25s;
-  transition: box-shadow .25s;
-  transition: box-shadow .25s, -webkit-box-shadow .25s;
-  border-radius: 2px;
-  width: 48%
-}
+
 
 .card .card-title {
   font-size: 24px;
