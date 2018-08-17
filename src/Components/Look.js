@@ -8,7 +8,8 @@ class Look extends Component {
             <div className='card'>
                     <h1 className='card-title'>{this.props.look.title}</h1>
                 <div className='card-image'>
-                    <img className='look-image' src={this.props.look.lookURL} alt={this.props.look.title}/>
+                    <img className='look-image' src={this.props.look.lookURL} alt={this.props.look.title}/><br/>
+                    <button className='btn #424242 grey darken-3 waves-light'>View</button>
                 </div>
             </div>
         );

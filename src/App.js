@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import UserPage from './Components/UserPage';
+import Navbar from './Components/Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Sartor & Patch</h1>
-        </header>
+        
+          <Navbar />
+        
         <p className="App-intro">
           
         </p>
+        
         <UserPage />
       </div>
     );
