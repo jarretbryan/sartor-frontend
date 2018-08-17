@@ -1,6 +1,6 @@
 
 
-class UserFetch {
+class UserAdapter {
 
     static index() {
         return fetch('http://localhost:3000/api/v1/users').then(res => res.json())
@@ -29,4 +29,4 @@ class UserFetch {
     } 
 }
 
-export default UserFetch
+export default UserAdapter

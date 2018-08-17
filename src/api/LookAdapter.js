@@ -1,4 +1,4 @@
-class lookFetch {
+class lookAdapter {
 
     static postLook(stateObj) {
         let postConfig = {
@@ -12,9 +12,9 @@ class lookFetch {
                 user_id: `${stateObj.user_id}`
             })
         }
-        return fetch(lookEndpoint, postConfig).then(res => res.json()).then(console.log)
+        return fetch('http://localhost:3000/api/v1/looks', postConfig).then(res => res.json())
     }
     
 }
 
-export default lookFetch
+export default lookAdapter

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserFetch from '../api/UserAdapter';
+import UserAdapter from '../api/UserAdapter';
 import LookList from './LookList';
 
 
@@ -12,7 +12,7 @@ class UserPage extends Component {
     }
 
     componentDidMount(){
-        UserFetch.showUser(2).then(res => this.setState({
+        UserAdapter.showUser(2).then(res => this.setState({
             userObj: res
         }))
     }
