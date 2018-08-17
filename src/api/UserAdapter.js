@@ -1,5 +1,4 @@
 
-
 class UserAdapter {
 
     static index() {

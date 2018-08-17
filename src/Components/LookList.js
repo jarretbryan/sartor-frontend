@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import Look from './Look';
 import LookForm from './LookForm';
 import LookAdapter from '../api/LookAdapter'
+import LookSpec from './LookSpec';
 
 
 class LookList extends Component {
 
     state = {
-        submitting:false
+        submitting:false,
+        SpecDisplay: false,
+        LookSpecToDisplay: {}
     }
     
 
     mapLooks = () => {
-        return this.props.looks.map((look) => <Look key={look.id} look={look}/>) 
+        return this.props.looks.map((look) => <Look key={look.id} look={look} onClick={this.clickView}/>) 
     }
 
     submitNewLook = (newlookObj) => {
@@ -32,10 +35,36 @@ class LookList extends Component {
             }}>Submit New Look </button>
         }
     }
+
+    
+
+    clickView = (obj) => {
+        // let that = this;
+       
+        this.setState({
+            SpecDisplay: true,
+            LookSpecToDisplay: obj
+        }, window.scroll(0,0))
+    }
+
+    hideSpec = () => {
+        this.setState({
+            SpecDisplay: false,
+            LookSpecToDisplay: null
+        })
+    }
+
+
+    renderLookSpec = () => {
+        if (this.state.SpecDisplay === true){
+            return <LookSpec look={this.state.LookSpecToDisplay} onClick={this.hideSpec}/>
+        }
+    }
     
     render() {
         return (
             <div>
+                {this.renderLookSpec()}
                 {this.renderSubmitForm()}
                 {this.mapLooks()}
             </div>

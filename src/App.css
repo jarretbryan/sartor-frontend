@@ -49,7 +49,20 @@
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   border-radius: 2px;
-  width: 40%;
+  width: 60%;
+  /* float: left; */
+}
+
+.full-card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: rgba(255, 255, 255, 0.774);
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  /* width: 40%; */
   /* float: left; */
 }
 

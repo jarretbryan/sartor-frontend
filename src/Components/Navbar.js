@@ -6,7 +6,7 @@ class Navbar extends Component {
         <div className="navbar-fixed ">
             
             <nav className="header">
-            <h3 className="left">Sartor & Patch</h3>
+            <h3 className="left">Sartor & Patch ✂ </h3>
                 <ul className ="right hide-on-med-and-down">
                     <li><a href="#home">Home </a></li>
                     <li><a href="#explore">Social </a></li>
