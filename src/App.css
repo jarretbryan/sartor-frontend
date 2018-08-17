@@ -4824,6 +4824,8 @@ small {
 
 .card.small, .card.medium, .card.large {
   position: relative;
+  /* float: left;
+  width: 20%; */
 }
 
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {

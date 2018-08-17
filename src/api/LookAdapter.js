@@ -1,8 +1,12 @@
 class lookAdapter {
 
     static index() {
-        return fetch('http://localhost:4000/api/v1/looks').then(res => res.json()).then(console.log)
+        return fetch('http://localhost:4000/api/v1/looks').then(res => res.json())
         }
+
+    static show(id) {
+        return fetch(`http://localhost:4000/api/v1/looks/${id}`).then(res => res.json())
+    }
 
     static postLook(stateObj) {
         let postConfig = {
