@@ -1,6 +1,5 @@
 
 
-
 class UserFetch {
 
         static index() {

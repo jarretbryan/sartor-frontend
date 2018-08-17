@@ -20,7 +20,6 @@ class UserPage extends Component {
     render() {
         return (
             <div>
-                HELLO
                 <LookList looks={this.state.userObj.looks}/>
             </div>
         );
