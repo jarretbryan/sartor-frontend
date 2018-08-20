@@ -36,11 +36,21 @@ class LookList extends Component {
         return this.state.LookList.map((look) => <Look key={look.id} look={look} onClick={this.clickView}/>) 
     }
 
+    // this will render optimistically, but the newlookObj
+    // has no id, so viewing it will break 
     submitNewLook = (newlookObj) => {
         LookAdapter.postLook(newlookObj).then(this.setState({
             submitting: false,
             LookList: [...this.state.LookList, newlookObj]
         }))
+    }
+
+    deleteLook = (idNum) => {
+        LookAdapter.deleteLook(idNum)
+        this.setState({
+            SpecDisplay: false,
+            LookList:[...this.state.LookList].filter(lookObj => lookObj.id !== idNum)
+        })
     }
 
     renderSubmitForm = () => {
@@ -76,7 +86,7 @@ class LookList extends Component {
 
     renderLookSpec = () => {
         if (this.state.SpecDisplay === true){
-            return <LookSpec look={this.state.LookSpecToDisplay} onClick={this.hideSpec}/>
+            return <LookSpec look={this.state.LookSpecToDisplay} onClick={this.hideSpec} deleteLook={this.deleteLook}/>
         }
     }
     
