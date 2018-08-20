@@ -12,7 +12,7 @@ class UserPage extends Component {
     }
 
     componentDidMount(){
-        UserAdapter.showUser(2).then(res => this.setState({
+        UserAdapter.showUser(3).then(res => this.setState({
             userObj: res
         }))
     }
