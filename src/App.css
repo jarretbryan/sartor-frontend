@@ -55,9 +55,14 @@
   transition: box-shadow .25s;
   transition: box-shadow .25s, -webkit-box-shadow .25s;
   border-radius: 2px;
-  width: 60%;
+  
   /* float: left; */
 }
+
+.look-list{
+  width: 60%;
+}
+
 
 .full-card {
   position: relative;

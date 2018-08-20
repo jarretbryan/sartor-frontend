@@ -63,7 +63,7 @@ class LookList extends Component {
     
     render() {
         return (
-            <div>
+            <div className='look-list'>
                 {this.renderLookSpec()}
                 {this.renderSubmitForm()}
                 {this.mapLooks()}
