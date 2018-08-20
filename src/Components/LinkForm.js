@@ -23,8 +23,8 @@ class LinkForm extends Component {
                 }, () => this.props.onSubmit(this.state) )
             }} >
                 <label> Link Your Look </label>
-                <input type="text" name="article" placeholder="article" value={this.state.article} onChange={this.handleChange} />
-                <input type="text" name="linkURL" placeholder="link!" value={this.state.linkURL} onChange={this.handleChange} />
+                <input type="text" name="article" placeholder="article" value={this.state.article} onChange={this.handleChange} required />
+                <input type="text" name="linkURL" placeholder="link!" value={this.state.linkURL} onChange={this.handleChange}  required />
 
                 <button className='btn #424242 grey darken-3 waves-light' type="submit"> Link Your Look </button>
             </form>  

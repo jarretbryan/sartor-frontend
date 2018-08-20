@@ -35,8 +35,8 @@ class LookForm extends Component {
                     }, () => this.props.onSubmit(this.state))
                 } }>
                     <label> Add New Look! </label>
-                    <input type="text" name="title" placeholder="title your look" value={this.state.title} onChange={this.handleChange} />
-                    <input type="text" name="lookURL" placeholder="link your photo!" value={this.state.lookURL} onChange={this.handleChange} />
+                    <input type="text" name="title" placeholder="title your look" value={this.state.title} onChange={this.handleChange} required />
+                    <input type="text" name="lookURL" placeholder="link your photo!" value={this.state.lookURL} onChange={this.handleChange} required />
                     
                     <button className='btn #424242 grey darken-3 waves-light' type="submit"> Submit Your Look! </button>
                 </form>                
