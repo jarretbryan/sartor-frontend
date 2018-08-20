@@ -17,7 +17,11 @@ class LinkForm extends Component {
     
     render() {
         return (
-            <form >
+            <form onSubmit={() => {
+                this.setState({
+                    look_id: this.props.lookId
+                }, () => this.props.onSubmit(this.state) )
+            }} >
                 <label> Link Your Look </label>
                 <input type="text" name="article" placeholder="title your look" value={this.state.article} onChange={this.handleChange} />
                 <input type="text" name="linkURL" placeholder="link!" value={this.state.linkURL} onChange={this.handleChange} />

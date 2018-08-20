@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import lookAdapter from '../api/LookAdapter';
 import Link from './Link';
 import LinkForm from './LinkForm';
+import LinkAdapter from '../api/LinkAdapter';
 
 class LookSpec extends Component {
 
@@ -36,9 +37,14 @@ class LookSpec extends Component {
 
     renderLinkForm = () => {
         if (this.state.newLink === true){
-            return < LinkForm />
+            return < LinkForm onSubmit={this.submitLink} lookId={this.props.look.id}/>
         }
     }
+
+    submitLink = (linkObj) => {
+        return LinkAdapter.postLink(linkObj)
+    }
+
 
     render() {
         return (
