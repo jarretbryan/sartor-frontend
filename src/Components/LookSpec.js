@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import lookAdapter from '../api/LookAdapter';
 import Link from './Link';
+import LinkForm from './LinkForm';
 
 class LookSpec extends Component {
 
     state = {
-        links: []
+        links: [],
+        newLink: false
     }
 
 
@@ -20,6 +22,24 @@ class LookSpec extends Component {
         return this.state.links.map(obj => <Link key={obj.id} linkInfo={obj}/>)
     }
 
+    changeLinkState = () => {
+        if (this.state.newLink === false){
+            this.setState({
+                newLink: true
+            })
+        } else {
+            this.setState({
+                newLink:false
+            })
+        }
+    }
+
+    renderLinkForm = () => {
+        if (this.state.newLink === true){
+            return < LinkForm />
+        }
+    }
+
 
     render() {
         return (
@@ -31,6 +51,8 @@ class LookSpec extends Component {
                     <ul className="">
                         {this.mapLinks()}
                     </ul>
+                    <button onClick={this.changeLinkState}>Add New Link!</button>
+                    {this.renderLinkForm()}
                     <hr/>
                 </div>
             </div>

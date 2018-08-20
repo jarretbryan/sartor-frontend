@@ -27,7 +27,7 @@ class LookForm extends Component {
         console.log(this.props.userId)
         console.log(this.state)
         return (
-            <div>
+            
                 <form onSubmit={(event) => {
                     event.preventDefault()
                     this.setState({
@@ -40,7 +40,7 @@ class LookForm extends Component {
                     
                     <button className='btn #424242 grey darken-3 waves-light' type="submit"> Submit Your Look! </button>
                 </form>                
-            </div>
+            
         );
     }
 }
