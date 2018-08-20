@@ -5,9 +5,13 @@ class Link extends Component {
         return (
             <li className = 'container'>
                <div className="collapsible-header"> 
-                    <p className="collection-item">{this.props.linkInfo.article} <br/>
-                    <a href={this.props.linkInfo.linkURL} className="collection-item active">Here</a>
-                    </p>
+                    <button className="btn #424242 grey darken-3 waves-light">
+                        
+                            <a href={this.props.linkInfo.linkURL} className="collection-item active">{this.props.linkInfo.article}</a>
+                    
+                    </button>
+                    <hr/>
+                    <button className="#bf360c deep-orange darken-4 waves-light">Remove Link</button>
                 </div>       
             </li>
         );

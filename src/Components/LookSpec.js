@@ -52,12 +52,12 @@ class LookSpec extends Component {
                 <h1 className='card-title'>{this.props.look.title}</h1>
                 <div className='card-image'>
                     <img className='full-image' src={this.props.look.lookURL} alt={this.props.look.title} /><br />
-                    <button onClick={() => this.props.onClick()}> Close </button>
-                    <button onClick={() => this.props.deleteLook(this.props.look.id) }> Delete This Look </button>
+                    <button className="btn #fb8c00 orange darken-1" onClick={() => this.props.onClick()}> Close </button>
+                    <button className="btn #c62828 red darken-3" onClick={() => this.props.deleteLook(this.props.look.id) }> Delete This Look </button>
                     <ul className="">
                         {this.mapLinks()}
                     </ul>
-                    <button onClick={this.changeLinkState}>Add New Link!</button>
+                    <button className="btn #42a5f5 blue lighten-1" onClick={this.changeLinkState}>Add New Link!</button>
                     {this.renderLinkForm()}
                     <hr/>
                 </div>
