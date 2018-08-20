@@ -53,6 +53,7 @@ class LookSpec extends Component {
                 <div className='card-image'>
                     <img className='full-image' src={this.props.look.lookURL} alt={this.props.look.title} /><br />
                     <button onClick={() => this.props.onClick()}> Close </button>
+                    <button onClick={() => lookAdapter.deleteLook(this.props.look.id) }> Delete This Look </button>
                     <ul className="">
                         {this.mapLinks()}
                     </ul>

@@ -22,6 +22,10 @@ class lookAdapter {
         }
         return fetch('http://localhost:4000/api/v1/looks', postConfig).then(res => res.json())
     }
+
+    static deleteLook(lookID){
+        return fetch(`http://localhost:4000/api/v1/looks/${lookID}`, { method: 'DELETE' })
+    }
     
 }
 
