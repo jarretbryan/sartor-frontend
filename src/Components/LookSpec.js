@@ -35,6 +35,8 @@ class LookSpec extends Component {
         }
     }
 
+
+
     renderLinkForm = () => {
         if (this.state.newLink === true){
             return < LinkForm onSubmit={this.submitLink} lookId={this.props.look.id}/>
@@ -42,8 +44,14 @@ class LookSpec extends Component {
     }
 
     submitLink = (linkObj) => {
+        this.setState({
+            newLink:false,
+            links:[...this.state.links,linkObj]
+        })
         return LinkAdapter.postLink(linkObj)
     }
+
+    
 
 
     render() {

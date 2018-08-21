@@ -17,7 +17,8 @@ class LinkForm extends Component {
     
     render() {
         return (
-            <form onSubmit={() => {
+            <form onSubmit={(e) => {
+                e.preventDefault()
                 this.setState({
                     look_id: this.props.lookId
                 }, () => this.props.onSubmit(this.state) )
