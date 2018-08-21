@@ -14,7 +14,7 @@ class App extends Component {
 
   state = {
     loggedIn: false,
-    currentPage: '',
+    path: '',
     idNum: null
   }
 
@@ -23,9 +23,14 @@ class App extends Component {
     .then(res => this.setState({
       loggedIn: true,
       idNum: res.id,
-      currentPage: `profile/${res.id}`
+      path: `profile/${res.id}`
     }))
   }
+
+  NavbarHandleClick = (page) => {
+    this.setState({ currentPage: page });
+  }
+
 
   renderLoginForm = () => {
     if (this.state.loggedIn === false){
@@ -39,7 +44,7 @@ class App extends Component {
       <Router>
         <div className="App">
           
-            <Navbar />
+            <Navbar handleClick={this.NavbarHandleClick}/>
             {this.renderLoginForm()}
           <Route path="/profile" render={() => <UserPage id={this.state.idNum} />} />      
           {/* <UserPage /> */}
