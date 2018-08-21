@@ -7,11 +7,11 @@ class Link extends Component {
                <div className="collapsible-header"> 
                     <button className="btn #424242 grey darken-3 waves-light">
                         
-                            <a href={this.props.linkInfo.linkURL} className="collection-item active">{this.props.linkInfo.article}</a>
+                        <a href={this.props.linkInfo.linkURL} className="collection-item active" target="_blank">{this.props.linkInfo.article}</a>
                     
                     </button>
                     <hr/>
-                    <button className="#bf360c deep-orange darken-4 waves-light">Remove Link</button>
+                    <button onClick={() => this.props.deleteLink(this.props.linkInfo.id)} className="#bf360c deep-orange darken-4 waves-light">Remove Link</button>
                 </div>       
             </li>
         );

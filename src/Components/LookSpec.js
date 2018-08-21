@@ -20,7 +20,7 @@ class LookSpec extends Component {
     }
 
     mapLinks = () => {
-        return this.state.links.map(obj => <Link key={obj.id} linkInfo={obj}/>)
+        return this.state.links.map(obj => <Link key={obj.id} deleteLink={this.deleteLink} linkInfo={obj} />)
     }
 
     changeLinkState = () => {
@@ -49,6 +49,16 @@ class LookSpec extends Component {
             links:[...this.state.links,linkObj]
         })
         return LinkAdapter.postLink(linkObj)
+    }
+
+    deleteLink = (num) => {
+        // event.preventDefault();
+        LinkAdapter.deleteLink(num)
+        .then(lookAdapter.show(this.props.look.id))
+        .then(res => this.setState({
+            links: res.links
+        }))
+        
     }
 
     
