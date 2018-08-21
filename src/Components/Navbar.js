@@ -8,9 +8,9 @@ class Navbar extends Component {
             <nav className="header">
             <h3 className="left">Sartor & Patch ✂ </h3>
                 <ul className ="right hide-on-med-and-down">
-                    <li><a href="#home">Home </a></li>
-                    <li><a href="#explore">Social </a></li>
-                    <li><a href="#home">Login </a></li>
+                    <li><a href="home">Home </a></li>
+                    <li><a href="explore">Social </a></li>
+                    <li><a href="login">Login </a></li>
                 </ul>
             </nav>
             

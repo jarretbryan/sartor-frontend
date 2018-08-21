@@ -20,7 +20,7 @@ class UserAdapter {
                 username: `${username}`
             })
         }
-        return fetch('http://localhost:4000/api/v1/users', postConfig).then(res => res.json()).then(console.log)
+        return fetch('http://localhost:4000/api/v1/users', postConfig).then(res => res.json())
     }
 
     static deleteUser(userId) {

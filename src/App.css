@@ -59,8 +59,28 @@
   /* float: left; */
 }
 
+.signin-form{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  margin-left: 25%;
+}
+
 .look-list{
-  width: 60%;
+  width: 75%;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
 
