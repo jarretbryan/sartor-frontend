@@ -13,6 +13,12 @@ class LinkAdapter{
         }
          return fetch('http://localhost:4000/api/v1/links', postConfig).then(res => res.json()).then(console.log)
     }
+
+    static deleteLink(linkID){
+        return fetch(`http://localhost:4000/api/v1/links/${linkID}`, { method: 'DELETE' })
+    }
+
+    
 }
 
 export default LinkAdapter

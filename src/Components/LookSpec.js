@@ -54,10 +54,10 @@ class LookSpec extends Component {
     deleteLink = (num) => {
         // event.preventDefault();
         LinkAdapter.deleteLink(num)
-        .then(lookAdapter.show(this.props.look.id))
-        .then(res => this.setState({
-            links: res.links
+        .then(this.setState({
+            links: [...this.state.links].filter(linkObj => linkObj.id !== num)
         }))
+      
         
     }
 
