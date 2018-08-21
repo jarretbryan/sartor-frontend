@@ -10,8 +10,8 @@ class Navbar extends Component {
             <h3 className="left">Sartor & Patch ✂ </h3>
                 <ul className ="right hide-on-med-and-down">
                         <li><NavLink activeClassName="active" to="/profile">Profile</NavLink></li>
-                    <li><a href="explore">Social </a></li>
-                    <li><a href="login">Login </a></li>
+                        <li><NavLink onClick={this.props.logOut} activeClassName="active" to="/logout">Logout</NavLink></li>
+                    {/* <li><a href="login">Login </a></li> */}
                 </ul>
             </nav>
             

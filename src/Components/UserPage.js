@@ -17,6 +17,16 @@ class UserPage extends Component {
         }))
     }
 
+    renderLookList = () => {
+        if (this.userObj.id){
+            return <div>
+                <LookList userId={this.state.userObj.id} looks={this.state.userObj.looks} />
+            </div>
+        } else {
+            return <div> Go Log</div>
+        }
+    }
+
   
 
     render() {
