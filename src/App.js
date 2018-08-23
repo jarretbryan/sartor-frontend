@@ -8,6 +8,7 @@ import UserPage from './Components/UserPage';
 import Navbar from './Components/Navbar';
 import SignIn from './Components/SignIn';
 import UserAdapter from './api/UserAdapter';
+import Sidebar from './Components/Sidebar';
 
 
 class App extends Component {
@@ -51,9 +52,11 @@ class App extends Component {
         <div className="App">
           
             <Navbar logOut={this.logOut}/>
+           
             {this.renderLoginForm()}
-          <Route path="/profile" render={() => <UserPage id={this.state.idNum} />} />      
-          {/* <UserPage /> */}
+          <Route path="/profile" 
+          render={() => { return <div><UserPage id={this.state.idNum} /> <Sidebar /> </div> } } />      
+          
         </div>
       </Router>
     );

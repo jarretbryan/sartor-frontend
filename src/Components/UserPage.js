@@ -17,6 +17,19 @@ class UserPage extends Component {
         }))
     }
 
+    // componentDidUpdate(prevProps, prevState, snapshot){
+    //     console.log(this.state.looks)
+    //     UserAdapter.showUser(this.props.id)
+    //     .then(res => {
+         
+    //         if (prevState.userObj.looks.length !== res.looks.length){
+    //             this.setState({
+    //                 userObj:res
+    //             })
+    //         }
+    //     })
+    // }
+
     renderLookList = () => {
         if (this.userObj.id){
             return <div>

@@ -81,6 +81,14 @@
   width: 75%;
   margin: 0.5em;
   padding: 0.5em;
+  float: left;
+}
+
+.look-list-2{
+  width: 22%;
+  margin: 0.5em;
+  padding: 0.5em;
+  float: left;
 }
 
 
